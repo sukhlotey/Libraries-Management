@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine</title>
+    <style>
+        .card {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+
+        .card-content {
+            flex: 1;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .card-content p {
+            margin: 5px 0;
+        }
+
+        .card:hover {    
+        background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <ul style="list-style-type:none; padding: 0;">
+            <li>
+
+                <a href={{ doc.route }} class="card">
+                   <img src={{ image }} alt="book">
+                    <div class="card-content">
+                        <h3>{{ name }}</h3>
+                        <p><strong>By:</strong> {{ author }}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
